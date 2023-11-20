@@ -1,0 +1,18 @@
+@mixin flex-container-space-between-auto($width, $max-width) {
+  display: flex;
+  justify-content: space-between;
+  width: $width;
+  max-width: $max-width;
+  margin: auto;
+}
+
+@mixin flex-container-center-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@mixin flex-container-column {
+  display: flex;
+  flex-direction: column;
+}

@@ -5,7 +5,7 @@ import Accueil from "./pages/Accueil.jsx";
 import Compétences from "./pages/Compétences.jsx";
 import Portfolio from "./pages/Portfolio.jsx";
 import Contact from "./pages/Contact.jsx";
-import "./index.css";
+import "./index.scss";
 
 const router = createBrowserRouter([
   {
