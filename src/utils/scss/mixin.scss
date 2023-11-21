@@ -1,0 +1,46 @@
+@mixin flex-container-space-between-auto($max-width, $width) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: $max-width;
+  width: $width;
+  margin: auto;
+}
+
+@mixin flex-container-center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-container-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin text-field-style($color1, $color2) {
+  .MuiInput-root {
+    color: $color1;
+
+    &:before {
+      border-bottom-color: $color2;
+    }
+
+    &:hover:not(.Mui-disabled, .Mui-error):before {
+      border-bottom-color: $color2;
+    }
+
+    &:after {
+      border-bottom-color: $color1;
+    }
+  }
+
+  .MuiInputLabel-root {
+    color: $color1;
+
+    &.Mui-focused {
+      color: $color1;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@keyframes appear {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appearFromBottom {
+  0% {
+    transform: translateY(100px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes progress-bar {
+  0% {
+    opacity: 1;
+    width: 0;
+  }
+  80% {
+    opacity: 1;
+    width: 100%;
+  }
+  100% {
+    opacity: 0;
+    width: 100%;
+  }
+}
