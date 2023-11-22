@@ -1,0 +1,38 @@
+.loading__bar {
+  opacity: 0;
+  position: absolute;
+  width: 100px;
+  height: 3px;
+  background-color: $text-secondary-color;
+  animation: progress-bar 1s ease-in-out 0.1s;
+}
+
+.header {
+  opacity: 0;
+  @include flex-container-space-between-auto($desktop-width, $width);
+  padding: $padding;
+  animation: appear $animation-duration ease-in-out forwards 0.1s;
+
+  &__title {
+    &--highlight {
+      margin-right: 1rem;
+      color: $symbol-color;
+    }
+  }
+
+  &__list {
+    @include flex-container-center;
+    gap: 2rem;
+
+    &:hover {
+      li:not(:hover) {
+        filter: brightness(0.5);
+      }
+    }
+  }
+
+  &__item {
+    font-size: 1.2rem;
+    transition: filter 0.2s ease-in-out;
+  }
+}

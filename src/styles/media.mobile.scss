@@ -1,0 +1,14 @@
+@media screen and (max-width: $mobile-width) {
+  .accueil {
+    &__title {
+      &--highlight {
+        font-size: 2rem;
+      }
+    }
+
+    &__avatar {
+      width: 250px !important;
+      height: 250px !important;
+    }
+  }
+}
