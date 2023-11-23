@@ -3,6 +3,7 @@
 @import "./utils/scss/keyframes.scss";
 @import "./styles/nav.scss";
 @import "./styles/accueil.scss";
+@import "./styles/competences.scss";
 @import "./styles/contact.scss";
 @import "./styles/footer.scss";
 @import "./styles/media.desktop.scss";
@@ -20,7 +21,7 @@
 
 html {
   font-family: $font-family;
-  color: $text-primary-color;
+  color: $primary-color;
   background-color: $bg-primary-color;
 }
 
@@ -28,4 +29,21 @@ html {
   @include flex-container-column;
   min-height: 100vh;
   overflow: hidden;
+}
+
+main {
+  @include flex-container-center;
+  flex: 1;
+}
+
+.bar {
+  height: 8vw;
+  width: 100%;
+  margin: -4vw 0px;
+  transform: rotate(-4deg) scale(1.2, 1);
+  background-color: $bg-primary-color;
+}
+
+.white__background {
+  background-color: $primary-color;
 }

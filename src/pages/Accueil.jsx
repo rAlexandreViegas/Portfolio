@@ -1,12 +1,15 @@
 import Nav from "../components/Nav";
-import Presentation from "../components/Presentation";
+import Main from "../components/Main";
+import Presentation from "../components/accueil/Presentation";
 import Footer from "../components/Footer";
 
 export default function Accueil() {
   return (
     <>
       <Nav />
-      <Presentation />
+      <Main>
+        <Presentation />
+      </Main>
       <Footer />
     </>
   );

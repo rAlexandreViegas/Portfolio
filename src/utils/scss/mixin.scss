@@ -1,15 +1,5 @@
-@mixin flex-container-space-between-auto($max-width, $width) {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: $max-width;
-  width: $width;
-  margin: auto;
-}
-
 @mixin flex-container-center {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -17,6 +7,23 @@
 @mixin flex-container-column {
   display: flex;
   flex-direction: column;
+}
+
+@mixin flex-container-space-between-width($max-width) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: $max-width;
+  width: 90%;
+  margin: auto;
+}
+
+@mixin flex-container-column-width($max-width) {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: $max-width;
+  margin: auto;
 }
 
 @mixin text-field-style($color1, $color2) {

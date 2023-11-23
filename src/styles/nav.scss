@@ -1,16 +1,16 @@
 .loading__bar {
-  opacity: 0;
+  z-index: 1;
   position: absolute;
-  width: 100px;
   height: 3px;
-  background-color: $text-secondary-color;
+  background-color: $secondary-color;
   animation: progress-bar 1s ease-in-out 0.1s;
 }
 
 .header {
+  z-index: 1;
+  @include flex-container-space-between-width($desktop-width);
+  padding: 3rem 0;
   opacity: 0;
-  @include flex-container-space-between-auto($desktop-width, $width);
-  padding: $padding;
   animation: appear $animation-duration ease-in-out forwards 0.1s;
 
   &__title {

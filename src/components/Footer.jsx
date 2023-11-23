@@ -12,7 +12,7 @@ export default function Footer() {
             target="_blank"
             rel="noreferrer"
           >
-            Mon dépot GitHub
+            Dépot GitHub du portfolio
           </a>
           <GitHubIcon className="footer__icon" />
         </div>

@@ -1,12 +1,6 @@
 import { useState } from "react";
 import { TextField, Button, Alert } from "@mui/material";
-
-const fields = [
-  { name: "name", label: "Votre nom", multiline: false },
-  { name: "email", label: "Votre e-mail", multiline: false },
-  { name: "subject", label: "Sujet", multiline: false },
-  { name: "message", label: "Message", multiline: true },
-];
+import fieldsForm from "../../utils/data/fieldsForm";
 
 export default function Form() {
   const [formData, setFormData] = useState({
@@ -90,13 +84,13 @@ export default function Form() {
   }
 
   return (
-    <main className="contact">
-      <h1 className="contact__title">Contactez-moi</h1>
-      <form className="contact__form" onSubmit={handleSubmit}>
-        {fields.map((field) => (
+    <section className="form__container">
+      <h1 className="form__title">Contactez-moi</h1>
+      <form className="form" onSubmit={handleSubmit}>
+        {fieldsForm.map((field) => (
           <TextField
             key={field.name}
-            className="contact__input"
+            className="form__input"
             type="text"
             label={field.label}
             variant="standard"
@@ -115,7 +109,7 @@ export default function Form() {
           />
         ))}
         <Button
-          className="contact__button"
+          className="form__button"
           type="submit"
           variant="contained"
           disabled={Object.values(errors).some((error) => error)}
@@ -124,12 +118,12 @@ export default function Form() {
         </Button>
       </form>
       <Alert
-        className="contact__alert"
+        className="form__alert"
         color="success"
         sx={{ visibility: success ? "visible" : "hidden" }}
       >
         Votre message a bien été envoyé !
       </Alert>
-    </main>
+    </section>
   );
 }

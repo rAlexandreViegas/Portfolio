@@ -1,12 +1,15 @@
 import Nav from "../components/Nav";
-import Form from "../components/Form";
+import Main from "../components/Main";
+import Form from "../components/contact/Form";
 import Footer from "../components/Footer";
 
 export default function Contact() {
   return (
     <>
       <Nav />
-      <Form />
+      <Main>
+        <Form />
+      </Main>
       <Footer />
     </>
   );

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import navLinks from "../utils/data/navLinks";
 
 export default function Nav() {
   return (
@@ -15,18 +16,11 @@ export default function Nav() {
         </Link>
         <nav className="header__nav">
           <ul className="header__list">
-            <li className="header__item">
-              <Link to="/">Accueil</Link>
-            </li>
-            <li className="header__item">
-              <Link to="/competences">Compétences</Link>
-            </li>
-            <li className="header__item">
-              <Link to="/portfolio">Portfolio</Link>
-            </li>
-            <li className="header__item">
-              <Link to="/contact">Contact</Link>
-            </li>
+            {navLinks.map((link) => (
+              <li key={link.to} className="header__item">
+                <Link to={link.to}>{link.text}</Link>
+              </li>
+            ))}
           </ul>
         </nav>
       </header>

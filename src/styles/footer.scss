@@ -1,13 +1,12 @@
 .footer {
-  opacity: 0;
   @include flex-container-column;
-  align-items: center;
   gap: 1rem;
-  padding: $padding;
+  padding: 3rem 0;
+  opacity: 0;
   animation: appearFromBottom $animation-duration ease-in-out forwards 0.1s;
 
   &__container {
-    @include flex-container-space-between-auto($desktop-width, $width);
+    @include flex-container-space-between-width($desktop-width);
   }
 
   &__text {
