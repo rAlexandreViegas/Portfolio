@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="footer__link">
           <a
             className="footer__text"
-            href="https://github.com/rAlexandreViegas"
+            href="https://github.com/rAlexandreViegas/Portfolio"
             target="_blank"
             rel="noreferrer"
           >
