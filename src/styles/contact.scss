@@ -4,8 +4,7 @@
   padding: 4rem;
   background-color: $bg-secondary-color;
   border-radius: 1rem;
-  opacity: 0;
-  animation: appearFromBottom $animation-duration ease-in-out forwards 0.2s;
+  @include play-animation(appearFromBottom, $animation-duration, 0.2s);
 
   &__container {
     @include flex-container-column-width($desktop-width);
@@ -16,8 +15,7 @@
   &__title {
     font-size: 3.5rem;
     font-weight: 700;
-    opacity: 0;
-    animation: appearFromBottom $animation-duration ease-in-out forwards 0.1s;
+    @include play-animation(appearFromBottom, $animation-duration, 0.1s);
   }
 
   &__input {
@@ -26,6 +24,6 @@
 
   &__button {
     margin-top: 2rem !important;
-    background-color: $symbol-color !important;
+    background-color: $tertiary-color !important;
   }
 }

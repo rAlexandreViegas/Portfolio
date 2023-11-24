@@ -51,3 +51,9 @@
     }
   }
 }
+
+@mixin play-animation($animation-name, $animation-duration, $animation-delay) {
+  opacity: 0;
+  animation: $animation-name $animation-duration ease-in-out forwards;
+  animation-delay: $animation-delay;
+}

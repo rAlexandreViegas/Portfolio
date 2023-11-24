@@ -3,7 +3,7 @@
   position: absolute;
   height: 3px;
   background-color: $secondary-color;
-  animation: progress-bar 1s ease-in-out 0.1s;
+  @include play-animation(progress-bar, 1s, 0.1s);
 }
 
 .header {
@@ -16,7 +16,7 @@
   &__title {
     &--highlight {
       margin-right: 1rem;
-      color: $symbol-color;
+      color: $tertiary-color;
     }
   }
 

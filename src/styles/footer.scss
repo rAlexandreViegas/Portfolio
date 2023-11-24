@@ -2,8 +2,7 @@
   @include flex-container-column;
   gap: 1rem;
   padding: 3rem 0;
-  opacity: 0;
-  animation: appearFromBottom $animation-duration ease-in-out forwards 0.1s;
+  @include play-animation(appearFromBottom, $animation-duration, 0.1s);
 
   &__container {
     @include flex-container-space-between-width($desktop-width);
