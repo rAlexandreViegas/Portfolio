@@ -1,12 +1,7 @@
 const fieldsForm = [
   {
-    name: "name",
-    label: "Votre nom",
-    multiline: false,
-  },
-  {
     name: "email",
-    label: "Votre e-mail",
+    label: "Votre email",
     multiline: false,
   },
   {

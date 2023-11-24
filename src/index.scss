@@ -6,9 +6,9 @@
 @import "./styles/competences.scss";
 @import "./styles/contact.scss";
 @import "./styles/footer.scss";
-@import "./styles/media.desktop.scss";
-@import "./styles/media.laptop.scss";
-@import "./styles/media.mobile.scss";
+@import "./styles/media_queries/laptop.scss";
+@import "./styles/media_queries/tablet.scss";
+@import "./styles/media_queries/mobile.scss";
 
 * {
   margin: 0;
@@ -31,19 +31,7 @@ html {
   overflow: hidden;
 }
 
-main {
+.main {
   @include flex-container-center;
   flex: 1;
-}
-
-.bar {
-  height: 8vw;
-  width: 100%;
-  margin: -4vw 0px;
-  transform: rotate(-4deg) scale(1.2, 1);
-  background-color: $bg-primary-color;
-}
-
-.white__background {
-  background-color: $primary-color;
 }

@@ -1,29 +1,32 @@
-.form {
-  @include flex-container-column-width($mobile-width);
-  gap: 1rem;
-  padding: 4rem;
-  background-color: $bg-secondary-color;
-  border-radius: 1rem;
-  @include play-animation(appearFromBottom, $animation-duration, 0.2s);
-
-  &__container {
-    @include flex-container-column-width($desktop-width);
-    align-items: center;
-    gap: 2rem;
-  }
+.contact {
+  @include flex-container-column-width($desktop-width);
+  align-items: center;
+  gap: 1.5rem;
 
   &__title {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 700;
     @include play-animation(appearFromBottom, $animation-duration, 0.1s);
   }
+}
+
+.form {
+  @include flex-container-column-width(400px);
+  gap: 1rem;
+  padding: 2rem;
+  background-color: $bg-secondary-color;
+  border-radius: 1rem;
+  @include play-animation(appearFromBottom, $animation-duration, 0.125s);
 
   &__input {
     @include text-field-style($primary-color, $secondary-color);
+    width: 90%;
+    margin: auto !important;
   }
 
   &__button {
-    margin-top: 2rem !important;
+    align-self: center;
+    width: 80% !important;
     background-color: $tertiary-color !important;
   }
 }

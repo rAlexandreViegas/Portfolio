@@ -3,22 +3,19 @@ import Avatar from "@mui/material/Avatar";
 
 export default function SkillList({ title, skills }) {
   const [animationDelay, setAnimationDelay] = useState("");
-  const [marginClass, setMarginClass] = useState("");
   const [scaleClass, setScaleClass] = useState("");
 
   useEffect(() => {
     switch (title) {
       case "Hobbies":
-        setAnimationDelay("0.25s");
-        setMarginClass("skills__container--margin-top");
-        setScaleClass("skills__icon--no-scale");
+        setAnimationDelay("0.175s");
+        setScaleClass("skills__skill-icon--no-scale");
         break;
       case "Outils":
-        setAnimationDelay("0.2s");
-        setMarginClass("skills__container--margin-top");
+        setAnimationDelay("0.15s");
         break;
       case "Back-end":
-        setAnimationDelay("0.15s");
+        setAnimationDelay("0.125s");
         break;
       default:
         setAnimationDelay("0.1s");
@@ -27,10 +24,7 @@ export default function SkillList({ title, skills }) {
   }, [title]);
 
   return (
-    <div
-      className={`skills__container ${marginClass}`}
-      style={{ animationDelay }}
-    >
+    <div className={"skills__container"} style={{ animationDelay }}>
       <h2 className="skills__title">{title}</h2>
       <ul className="skills__list">
         {skills.map((skill) => (
@@ -41,13 +35,13 @@ export default function SkillList({ title, skills }) {
             target="_blank"
             rel="noreferrer"
           >
-            <li className="skills__item">
+            <li className="skills__skill">
               <Avatar
-                className={`skills__icon ${scaleClass}`}
+                className={`skills__skill-icon ${scaleClass}`}
                 variant="square"
                 src={skill.icon}
               />
-              <p className="skills__text">{skill.name}</p>
+              <p className="skills__skill-name">{skill.name}</p>
             </li>
           </a>
         ))}

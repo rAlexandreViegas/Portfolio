@@ -1,21 +1,19 @@
 .skills {
   @include flex-container-space-between-width($desktop-width);
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 5rem;
 
   &__container {
     @include flex-container-column;
     align-items: center;
     gap: 1rem;
     width: 45%;
-    @include play-animation(appearFromBottom, $animation-duration, 0s);
-
-    &--margin-top {
-      margin-top: 5rem;
-    }
+    @include play-animation(appearFromBottom, $animation-duration, 0.1s);
   }
 
   &__title {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
   }
 
   &__list {
@@ -24,13 +22,13 @@
     gap: 1rem;
   }
 
-  &__item {
+  &__skill {
     @include flex-container-column;
     align-items: center;
     gap: 1rem;
 
     &:hover {
-      .skills__icon {
+      .skills__skill-icon {
         transform: scale(1.2);
 
         &--no-scale {
@@ -38,29 +36,26 @@
         }
       }
     }
-  }
 
-  &__icon {
-    width: 5rem !important;
-    height: 5rem !important;
-    transition: transform 0.2s ease-in-out;
-    padding: 0.5rem;
-    border-radius: 1rem !important;
-    background-color: $primary-color;
-    box-shadow: 0px 4px 0px 0px $tertiary-color;
-  }
+    &-icon {
+      width: 4.5rem !important;
+      height: 4.5rem !important;
+      transition: transform 0.2s ease-in-out;
+      padding: 0.5rem;
+      border-radius: 1rem !important;
+      background-color: $primary-color;
+      box-shadow: 0px 4px 0px 0px $tertiary-color;
+    }
 
-  &__text {
-    font-size: 1.2rem;
-    font-weight: 700;
+    &-name {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
   }
 
   &__description {
-    width: 100%;
-    margin-top: 4rem;
-    text-align: center;
     font-size: 1.5rem;
     font-weight: 500;
-    @include play-animation(appearFromBottom, $animation-duration, 0.18s);
+    @include play-animation(appearFromBottom, $animation-duration, 0.15s);
   }
 }

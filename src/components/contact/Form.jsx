@@ -1,55 +1,44 @@
 import { useState } from "react";
 import { TextField, Button, Alert } from "@mui/material";
+import initialFormData from "../../utils/data/formData";
 import fieldsForm from "../../utils/data/fieldsForm";
 
+// Validation des champs
+const validateInput = (input) => input.trim() !== "";
+
+// Validation de l'email
+const validateEmail = (email) => {
+  const isNotEmpty = validateInput(email);
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  return {
+    isValid: isNotEmpty && emailRegex.test(email),
+    errorMessage: isNotEmpty
+      ? "L'e-mail doit être valide"
+      : "Le champ ne doit pas être vide",
+  };
+};
+
 export default function Form() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
+  const [formData, setFormData] = useState(initialFormData);
   const [errors, setErrors] = useState({});
   const [success, setSuccess] = useState(false);
-
-  // Validation du champ
-  function validateInput(value) {
-    return value.trim() !== "";
-  }
-
-  // Validation de l'e-mail
-  function validateEmail(value) {
-    const isNotEmpty = validateInput(value);
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (!isNotEmpty) {
-      return {
-        isValid: false,
-        errorMessage: "Le champ ne doit pas être vide",
-      };
-    }
-
-    return {
-      isValid: emailRegex.test(value),
-      errorMessage: "L'e-mail doit être valide",
-    };
-  }
 
   // Mise à jour des champs
   function handleChange(e, fieldName) {
     const value = e.target.value;
-    const updatedData = { ...formData, [fieldName]: value };
-    setFormData(updatedData);
 
-    // Mise à jour des erreurs
-    const updatedErrors = {
+    const newFormData = { ...formData, [fieldName]: value };
+    setFormData(newFormData);
+
+    const newErrors = {
       ...errors,
       [fieldName]:
         fieldName === "email"
           ? !validateEmail(value).isValid
           : !validateInput(value),
     };
-    setErrors(updatedErrors);
+    setErrors(newErrors);
   }
 
   // Soumission du formulaire
@@ -57,26 +46,20 @@ export default function Form() {
     e.preventDefault();
     setSuccess(false);
 
-    // Vérification des erreurs
-    const isFormValid = Object.keys(formData).every((fieldName) => {
-      if (fieldName === "email") {
-        return validateEmail(formData[fieldName]).isValid;
-      }
-      return validateInput(formData[fieldName]);
+    let isFormValid = true;
+    const newErrors = {};
+
+    Object.keys(formData).forEach((fieldName) => {
+      const isValid =
+        fieldName === "email"
+          ? validateEmail(formData[fieldName]).isValid
+          : validateInput(formData[fieldName]);
+
+      isFormValid = isValid;
+      newErrors[fieldName] = !isValid;
     });
 
-    // Mise à jour des erreurs
-    setErrors(() => {
-      const newErrors = {};
-      Object.keys(formData).forEach((fieldName) => {
-        if (fieldName === "email") {
-          newErrors[fieldName] = !validateEmail(formData[fieldName]).isValid;
-        } else {
-          newErrors[fieldName] = !validateInput(formData[fieldName]);
-        }
-      });
-      return newErrors;
-    });
+    setErrors(newErrors);
 
     if (isFormValid) {
       setSuccess(true);
@@ -84,8 +67,8 @@ export default function Form() {
   }
 
   return (
-    <section className="form__container">
-      <h1 className="form__title">Contactez-moi</h1>
+    <section className="contact">
+      <h1 className="contact__title">Contactez-moi</h1>
       <form className="form" onSubmit={handleSubmit}>
         {fieldsForm.map((field) => (
           <TextField
@@ -105,7 +88,7 @@ export default function Form() {
             }
             onChange={(e) => handleChange(e, field.name)}
             multiline={field.multiline}
-            rows={field.multiline ? 5 : 1}
+            rows={field.multiline ? 4 : 1}
           />
         ))}
         <Button

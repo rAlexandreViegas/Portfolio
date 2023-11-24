@@ -1,31 +1,21 @@
 .presentation {
   @include flex-container-space-between-width($desktop-width);
-  flex-wrap: wrap;
-  gap: 8rem;
-
-  &__wrapper {
-    @include flex-container-center;
-    gap: 3rem;
-    width: 100%;
-  }
+  gap: 2rem;
 
   &__container {
-    @include flex-container-column;
     @include play-animation(appearFromBottom, $animation-duration, 0.1s);
   }
 
   &__title {
-    &-h1 {
-      color: $primary-color;
-      font-size: 4rem;
-      font-weight: 700;
-    }
+    color: $primary-color;
+    font-size: 4rem;
+    font-weight: 700;
 
     &-h2 {
       color: $tertiary-color;
       font-size: 2rem;
       font-weight: 400;
-      line-height: 4.5rem;
+      margin: 1.25rem 0;
     }
   }
 
@@ -36,11 +26,9 @@
   }
 
   &__social {
-    &-links-container {
-      display: flex;
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
 
     &-frame {
       width: 65px !important;
@@ -57,32 +45,9 @@
   }
 
   &__avatar {
-    width: 400px !important;
-    height: 400px !important;
+    width: 350px !important;
+    height: 350px !important;
     background-color: $bg-secondary-color;
-    @include play-animation(appearFromBottom, $animation-duration, 0.2s);
-  }
-
-  &__stack {
-    &-container {
-      display: flex;
-      justify-content: space-evenly;
-      width: 80%;
-      margin: auto;
-      @include play-animation(appearFromBottom, $animation-duration, 0.3s);
-    }
-
-    &-item {
-      @include flex-container-column;
-      align-items: center;
-      gap: 1rem;
-      font-size: 2rem;
-    }
-
-    &-icon {
-      width: 100px !important;
-      height: 100px !important;
-      color: $tertiary-color !important;
-    }
+    @include play-animation(appearFromBottom, $animation-duration, 0.125s);
   }
 }

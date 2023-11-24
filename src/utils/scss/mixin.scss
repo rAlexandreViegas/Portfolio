@@ -12,9 +12,8 @@
 @mixin flex-container-space-between-width($max-width) {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  max-width: $max-width;
   width: 90%;
+  max-width: $max-width;
   margin: auto;
 }
 

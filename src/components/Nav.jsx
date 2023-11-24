@@ -17,7 +17,7 @@ export default function Nav() {
         <nav className="header__nav">
           <ul className="header__list">
             {navLinks.map((link) => (
-              <li key={link.to} className="header__item">
+              <li key={link.to} className="header__link">
                 <Link to={link.to}>{link.text}</Link>
               </li>
             ))}
