@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Avatar from "@mui/material/Avatar";
 
 export default function SkillList({ title, skills }) {
-  const [animationDelay, setAnimationDelay] = useState("0.1s");
+  const [animationDelay, setAnimationDelay] = useState("");
   const [marginClass, setMarginClass] = useState("");
   const [scaleClass, setScaleClass] = useState("");
 

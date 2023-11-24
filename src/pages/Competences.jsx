@@ -7,11 +7,11 @@ export default function Compétences() {
   return (
     <>
       <Nav />
-      <div className="bar"></div>
-      <Main title="white__background">
+      {/* <div className="bar"></div> */}
+      <Main>
         <Skills />
       </Main>
-      <div className="bar"></div>
+      {/* <div className="bar"></div> */}
       <Footer />
     </>
   );
