@@ -4,14 +4,30 @@
   align-items: center;
 }
 
+@mixin flex-container-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 @mixin flex-container-column {
   display: flex;
   flex-direction: column;
 }
 
+@mixin flex-container-center-width($max-width) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: $max-width;
+  margin: auto;
+}
+
 @mixin flex-container-space-between-width($max-width) {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 90%;
   max-width: $max-width;
   margin: auto;
@@ -47,6 +63,18 @@
 
     &.Mui-focused {
       color: $color1;
+    }
+  }
+}
+
+@mixin buttons-categories-style() {
+  .MuiButton-root {
+    color: $primary-color;
+    border-color: $primary-color;
+
+    &:hover {
+      border-color: $primary-color;
+      background-color: $bg-secondary-color;
     }
   }
 }

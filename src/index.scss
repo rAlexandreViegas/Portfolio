@@ -4,6 +4,7 @@
 @import "./styles/nav.scss";
 @import "./styles/accueil.scss";
 @import "./styles/competences.scss";
+@import "./styles/portfolio.scss";
 @import "./styles/contact.scss";
 @import "./styles/footer.scss";
 @import "./styles/media_queries/laptop.scss";
@@ -21,17 +22,16 @@
 
 html {
   font-family: $font-family;
-  color: $primary-color;
+  color: $primary-color !important;
   background-color: $bg-primary-color;
 }
 
 #root {
   @include flex-container-column;
-  min-height: 100vh;
-  overflow: hidden;
+  height: 100vh;
 }
 
 .main {
   @include flex-container-center;
-  flex: 1;
+  height: 100%;
 }
