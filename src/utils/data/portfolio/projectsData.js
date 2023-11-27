@@ -27,7 +27,7 @@ const projetcsData = [
     description:
       "Réalisation d'une API sécurisée pour une application d'avis gastronomiques",
     image: hotTakesScreenshot,
-    langagues: ["Express", "MongoDB"],
+    langagues: ["Express.js", "MongoDB"],
     link: "https://github.com/rAlexandreViegas/hot_takes",
     category: "Back-end",
   },
