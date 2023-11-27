@@ -6,6 +6,7 @@
 
   &__categories {
     @include flex-container-center;
+    align-items: stretch;
     @include buttons-categories-style;
     @include play-animation(appearFromBottom, $animation-duration, 0.1s);
   }
@@ -15,7 +16,6 @@
     flex: 1;
     flex-wrap: wrap;
     gap: 1rem;
-    height: 100%;
     @include play-animation(appearFromBottom, $animation-duration, 0.125s);
   }
 
@@ -27,28 +27,22 @@
     height: 100%;
     color: $primary-color !important;
     background-color: $bg-secondary-color !important;
-
     &-media {
       height: 93px;
     }
-
     &-container {
       flex: 1;
     }
-
     &-title {
       font-weight: 500 !important;
     }
-
     &-description {
       color: $secondary-color;
     }
-
     &-infos {
       @include flex-container-space-between;
       flex-wrap: wrap;
     }
-
     &-languages {
       display: flex;
       gap: 0.5rem;

@@ -30,13 +30,11 @@
     &:hover {
       .skills__skill-icon {
         transform: scale(1.2);
-
         &--no-scale {
           transform: none;
         }
       }
     }
-
     &-icon {
       width: 72px !important;
       height: 72px !important;
@@ -46,7 +44,6 @@
       box-shadow: 0px 4px 0px 0px $tertiary-color;
       transition: transform 0.2s ease-in-out;
     }
-
     &-name {
       font-size: 1.2rem;
       font-weight: 700;
@@ -54,6 +51,7 @@
   }
 
   &__description {
+    text-align: center;
     font-size: 1.5rem;
     font-weight: 500;
     @include play-animation(appearFromBottom, $animation-duration, 0.15s);

@@ -10,7 +10,6 @@
     color: $primary-color;
     font-size: 3.5rem;
     font-weight: 700;
-
     &-h2 {
       color: $tertiary-color;
       font-size: 2rem;
@@ -29,14 +28,12 @@
     display: flex;
     gap: 1rem;
     margin-top: 1.5rem;
-
     &-frame {
       width: 65px !important;
       height: 65px !important;
       border-radius: 1rem !important;
       background-color: $bg-secondary-color !important;
     }
-
     &-icon {
       width: 40px !important;
       height: 40px !important;

@@ -1,2 +1,42 @@
 @media screen and (max-width: $mobile-width) {
+  .header {
+    flex-direction: row;
+
+    &__title {
+      display: flex;
+      width: 100%;
+      &-logo {
+        margin-right: 0.5rem;
+      }
+      &-full {
+        display: none;
+      }
+      &-short {
+        display: block;
+      }
+    }
+
+    &__list {
+      display: none;
+    }
+
+    &__mobile {
+      display: block;
+    }
+  }
+
+  .presentation {
+    &__title {
+      font-size: 1.8rem;
+      &-h2 {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .contact {
+    &__title {
+      font-size: 2rem;
+    }
+  }
 }

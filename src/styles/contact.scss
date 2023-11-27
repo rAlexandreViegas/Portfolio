@@ -16,13 +16,11 @@
     border-radius: 1rem;
     background-color: $bg-secondary-color;
     @include play-animation(appearFromBottom, $animation-duration, 0.125s);
-
     &-input {
       @include text-field-style;
       width: calc(100% - 2rem);
       margin: auto !important;
     }
-
     &-button {
       align-self: center;
       width: calc(100% - 2rem);

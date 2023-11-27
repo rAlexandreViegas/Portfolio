@@ -5,25 +5,31 @@
   @include play-animation(appear, $animation-duration, 0.1s);
 
   &__title {
-    &--highlight {
+    &-logo {
       margin-right: 1rem;
       color: $tertiary-color;
+    }
+    &-short {
+      display: none;
     }
   }
 
   &__list {
     @include flex-container-center;
+    flex-wrap: wrap;
     gap: 2rem;
-
     &:hover {
       li:not(:hover) {
         filter: brightness(0.5);
       }
     }
+    &-link {
+      font-size: 1.2rem;
+      transition: filter 0.2s ease-in-out;
+    }
   }
 
-  &__link {
-    font-size: 1.2rem;
-    transition: filter 0.2s ease-in-out;
+  &__mobile {
+    display: none;
   }
 }
