@@ -1,8 +1,8 @@
 import SkillList from "./SkillList";
-import frontEndLanguages from "../../utils/data/frontEndLanguages";
-import backEndLanguages from "../../utils/data/backEndLanguages";
-import outils from "../../utils/data/outils";
-import hobbies from "../../utils/data/hobbies";
+import frontEndLanguages from "../../utils/data/competences/frontEndLanguages";
+import backEndLanguages from "../../utils/data/competences/backEndLanguages";
+import outils from "../../utils/data/competences/outils";
+import hobbies from "../../utils/data/competences/hobbies";
 
 export default function Skills() {
   return (

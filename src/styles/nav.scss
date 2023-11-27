@@ -1,17 +1,8 @@
-.loading__bar {
-  z-index: 1;
-  position: absolute;
-  height: 3px;
-  background-color: $secondary-color;
-  @include play-animation(progress-bar, 1s, 0.1s);
-}
-
 .header {
   z-index: 1;
   @include flex-container-space-between-width($desktop-width);
   padding: 3rem 0;
-  opacity: 0;
-  animation: appear $animation-duration ease-in-out forwards 0.1s;
+  @include play-animation(appear, $animation-duration, 0.1s);
 
   &__title {
     &--highlight {

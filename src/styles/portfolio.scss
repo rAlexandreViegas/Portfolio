@@ -2,11 +2,10 @@
   @include flex-container-column-width($desktop-width);
   gap: 1rem;
   height: 100%;
-  padding-top: 2rem;
+  padding: 1rem 0;
 
   &__categories {
     @include flex-container-center;
-    width: 100%;
     @include buttons-categories-style;
     @include play-animation(appearFromBottom, $animation-duration, 0.1s);
   }
@@ -15,14 +14,14 @@
     @include flex-container-center;
     flex: 1;
     flex-wrap: wrap;
-    width: 100%;
     gap: 1rem;
+    height: 100%;
     @include play-animation(appearFromBottom, $animation-duration, 0.125s);
   }
 
   &__card {
     @include flex-container-column;
-    max-width: 350px;
+    max-width: 400px;
     max-height: 250px;
     width: 100%;
     height: 100%;
@@ -30,8 +29,7 @@
     background-color: $bg-secondary-color !important;
 
     &-media {
-      min-height: 90px;
-      max-height: 100%;
+      height: 93px;
     }
 
     &-container {
@@ -48,6 +46,7 @@
 
     &-infos {
       @include flex-container-space-between;
+      flex-wrap: wrap;
     }
 
     &-languages {

@@ -2,13 +2,13 @@
   @include flex-container-space-between-width($desktop-width);
   flex-wrap: wrap;
   justify-content: center;
-  gap: 5rem;
+  gap: 4rem;
 
   &__container {
     @include flex-container-column;
     align-items: center;
     gap: 1rem;
-    width: 45%;
+    width: calc(50% - 4rem);
     @include play-animation(appearFromBottom, $animation-duration, 0.1s);
   }
 
@@ -38,13 +38,13 @@
     }
 
     &-icon {
-      width: 4.5rem !important;
-      height: 4.5rem !important;
-      transition: transform 0.2s ease-in-out;
+      width: 72px !important;
+      height: 72px !important;
       padding: 0.5rem;
       border-radius: 1rem !important;
       background-color: $primary-color;
       box-shadow: 0px 4px 0px 0px $tertiary-color;
+      transition: transform 0.2s ease-in-out;
     }
 
     &-name {

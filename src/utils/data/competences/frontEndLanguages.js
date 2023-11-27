@@ -1,9 +1,9 @@
-import reactIcon from "../../assets/icons/frontend/react.svg";
-import javaScriptIcon from "../../assets/icons/frontend/javascript.svg";
-import jQuerytIcon from "../../assets/icons/frontend/jquery.svg";
-import sassIcon from "../../assets/icons/frontend/sass.svg";
-import htmlIcon from "../../assets/icons/frontend/html.svg";
-import cssIcon from "../../assets/icons/frontend/css.svg";
+import reactIcon from "../../../assets/icons/frontend/react.svg";
+import javaScriptIcon from "../../../assets/icons/frontend/javascript.svg";
+import jQuerytIcon from "../../../assets/icons/frontend/jquery.svg";
+import sassIcon from "../../../assets/icons/frontend/sass.svg";
+import htmlIcon from "../../../assets/icons/frontend/html.svg";
+import cssIcon from "../../../assets/icons/frontend/css.svg";
 
 const frontEndLanguages = [
   {

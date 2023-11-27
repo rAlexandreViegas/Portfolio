@@ -1,23 +1,9 @@
 import { useState } from "react";
 import { TextField, Button, Alert } from "@mui/material";
-import initialFormData from "../../utils/data/formData";
-import fieldsForm from "../../utils/data/fieldsForm";
-
-// Validation des champs
-const validateInput = (input) => input.trim() !== "";
-
-// Validation de l'email
-const validateEmail = (email) => {
-  const isNotEmpty = validateInput(email);
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  return {
-    isValid: isNotEmpty && emailRegex.test(email),
-    errorMessage: isNotEmpty
-      ? "L'e-mail doit être valide"
-      : "Le champ ne doit pas être vide",
-  };
-};
+import validateInput from "../../utils/functions/validateInput";
+import validateEmail from "../../utils/functions/validateEmail";
+import initialFormData from "../../utils/data/contact/initialFormData";
+import fieldsForm from "../../utils/data/contact/fieldsForm";
 
 export default function Form() {
   const [formData, setFormData] = useState(initialFormData);
@@ -25,7 +11,7 @@ export default function Form() {
   const [success, setSuccess] = useState(false);
 
   // Mise à jour des champs
-  function handleChange(e, fieldName) {
+  const handleChange = (e, fieldName) => {
     const value = e.target.value;
 
     const newFormData = { ...formData, [fieldName]: value };
@@ -34,46 +20,50 @@ export default function Form() {
     const newErrors = {
       ...errors,
       [fieldName]:
+        // Si le champ est l'email
         fieldName === "email"
-          ? !validateEmail(value).isValid
+          ? // Valider le champ de l'email separément
+            !validateEmail(value).isValid
           : !validateInput(value),
     };
     setErrors(newErrors);
-  }
+  };
 
   // Soumission du formulaire
-  function handleSubmit(e) {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setSuccess(false);
 
     let isFormValid = true;
     const newErrors = {};
 
-    Object.keys(formData).forEach((fieldName) => {
+    for (const fieldName in formData) {
       const isValid =
+        // Si le champ est l'email
         fieldName === "email"
-          ? validateEmail(formData[fieldName]).isValid
+          ? // Valider le champ de l'email séparément
+            validateEmail(formData[fieldName]).isValid
           : validateInput(formData[fieldName]);
 
       isFormValid = isValid;
       newErrors[fieldName] = !isValid;
-    });
+    }
 
     setErrors(newErrors);
 
     if (isFormValid) {
       setSuccess(true);
     }
-  }
+  };
 
   return (
     <section className="contact">
       <h1 className="contact__title">Contactez-moi</h1>
-      <form className="form" onSubmit={handleSubmit}>
+      <form className="contact__form" onSubmit={handleSubmit}>
         {fieldsForm.map((field) => (
           <TextField
             key={field.name}
-            className="form__input"
+            className="contact__form-input"
             type="text"
             label={field.label}
             variant="standard"
@@ -81,9 +71,12 @@ export default function Form() {
             error={errors[field.name]}
             helperText={
               errors[field.name]
-                ? field.name === "email"
-                  ? validateEmail(formData[field.name]).errorMessage
-                  : "Le champ ne doit pas être vide"
+                ? // Si le champ est l'email
+                  field.name === "email"
+                  ? // Afficher le message d'erreur personnalisé pour l'email
+                    validateEmail(formData[field.name]).errorMessage
+                  : // Sinon afficher le message d'erreur général
+                    "Le champ ne doit pas être vide"
                 : ""
             }
             onChange={(e) => handleChange(e, field.name)}
@@ -92,7 +85,7 @@ export default function Form() {
           />
         ))}
         <Button
-          className="form__button"
+          className="contact__form-button"
           type="submit"
           variant="contained"
           disabled={Object.values(errors).some((error) => error)}
@@ -101,7 +94,7 @@ export default function Form() {
         </Button>
       </form>
       <Alert
-        className="form__alert"
+        className="contact__form-alert"
         color="success"
         sx={{ visibility: success ? "visible" : "hidden" }}
       >

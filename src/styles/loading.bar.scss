@@ -1,0 +1,7 @@
+.loading__bar {
+  z-index: 1;
+  position: absolute;
+  height: 3px;
+  background-color: $secondary-color;
+  @include play-animation(progress-bar, 1s, 0.1s);
+}

@@ -1,6 +1,6 @@
 import { Avatar } from "@mui/material";
 import avatarImg from "../../assets/avatar.png";
-import links from "../../utils/data/links";
+import socialLinks from "../../utils/data/accueil/socialLinks";
 
 export default function Presentation() {
   return (
@@ -17,7 +17,7 @@ export default function Presentation() {
           une expertise grandissante dans la stack MERN.
         </p>
         <div className="presentation__social">
-          {links.map((link) => (
+          {socialLinks.map((link) => (
             <a
               key={link.name}
               className="presentation__social-link"

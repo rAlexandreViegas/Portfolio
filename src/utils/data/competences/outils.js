@@ -1,7 +1,7 @@
-import gitIcon from "../../assets/icons/outils/git.svg";
-import prismaIcon from "../../assets/icons/outils/prisma.png";
-import dockerIcon from "../../assets/icons/outils/docker.svg";
-import figmaIcon from "../../assets/icons/outils/figma.svg";
+import gitIcon from "../../../assets/icons/outils/git.svg";
+import prismaIcon from "../../../assets/icons/outils/prisma.png";
+import dockerIcon from "../../../assets/icons/outils/docker.svg";
+import figmaIcon from "../../../assets/icons/outils/figma.svg";
 
 const outils = [
   {

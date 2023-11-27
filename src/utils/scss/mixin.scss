@@ -15,6 +15,11 @@
   flex-direction: column;
 }
 
+@mixin flex-container-align-center {
+  display: flex;
+  align-items: center;
+}
+
 @mixin flex-container-center-width($max-width) {
   display: flex;
   justify-content: center;
@@ -41,28 +46,28 @@
   margin: auto;
 }
 
-@mixin text-field-style($color1, $color2) {
+@mixin text-field-style() {
   .MuiInput-root {
-    color: $color1;
+    color: $primary-color;
 
     &:before {
-      border-bottom-color: $color2;
+      border-bottom-color: $secondary-color;
     }
 
     &:hover:not(.Mui-disabled, .Mui-error):before {
-      border-bottom-color: $color2;
+      border-bottom-color: $secondary-color;
     }
 
     &:after {
-      border-bottom-color: $color1;
+      border-bottom-color: $primary-color;
     }
   }
 
   .MuiInputLabel-root {
-    color: $color1;
+    color: $primary-color;
 
     &.Mui-focused {
-      color: $color1;
+      color: $primary-color;
     }
   }
 }
