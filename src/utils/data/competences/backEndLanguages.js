@@ -6,36 +6,36 @@ import mongoDbIcon from "../../../assets/icons/backend/mongodb.svg";
 import sqlIcon from "../../../assets/icons/backend/sql.svg";
 
 const backEndLanguages = [
-  {
-    name: "NodeJS",
-    icon: nodeJsIcon,
-    link: "https://nodejs.org/en/",
-  },
-  {
-    name: "PHP",
-    icon: phpIcon,
-    link: "https://www.php.net/",
-  },
-  {
-    name: "ExpressJS",
-    icon: expressIcon,
-    link: "https://expressjs.com/",
-  },
-  {
-    name: "Symfony",
-    icon: symfonyIcon,
-    link: "https://symfony.com/",
-  },
-  {
-    name: "MongoDB",
-    icon: mongoDbIcon,
-    link: "https://www.mongodb.com/",
-  },
-  {
-    name: "SQL",
-    icon: sqlIcon,
-    link: "https://www.mysql.com/",
-  },
+    {
+        name: "Node.js",
+        icon: nodeJsIcon,
+        link: "https://nodejs.org/en/",
+    },
+    {
+        name: "PHP",
+        icon: phpIcon,
+        link: "https://www.php.net/",
+    },
+    {
+        name: "Express.js",
+        icon: expressIcon,
+        link: "https://expressjs.com/",
+    },
+    {
+        name: "Symfony",
+        icon: symfonyIcon,
+        link: "https://symfony.com/",
+    },
+    {
+        name: "MongoDB",
+        icon: mongoDbIcon,
+        link: "https://www.mongodb.com/",
+    },
+    {
+        name: "SQL",
+        icon: sqlIcon,
+        link: "https://www.mysql.com/",
+    },
 ];
 
 export default backEndLanguages;
