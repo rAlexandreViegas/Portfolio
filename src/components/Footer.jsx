@@ -18,7 +18,7 @@ export default function Footer() {
         </div>
       </div>
       <p className="footer__text">
-        Built by Alexandre Viegas using React and SCSS.
+        Built by Alexandre Viegas using React.js
       </p>
     </footer>
   );
