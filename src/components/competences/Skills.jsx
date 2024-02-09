@@ -9,10 +9,6 @@ export default function Skills() {
     <section className="skills">
       <SkillList title="Front-end" skills={frontEndLanguages} />
       <SkillList title="Back-end" skills={backEndLanguages} />
-      <p className="skills__description">
-        Communication efficace • Travail d'équipe • Résolution de problèmes •
-        Adaptabilité
-      </p>
       <SkillList title="Outils" skills={outils} />
       <SkillList title="Hobbies" skills={hobbies} />
     </section>
