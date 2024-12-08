@@ -1,5 +1,4 @@
 import { Avatar } from "@mui/material";
-import avatarImg from "../../assets/avatar.png";
 import socialLinks from "../../utils/data/accueil/socialLinks";
 
 export default function Presentation() {
@@ -31,7 +30,7 @@ export default function Presentation() {
           ))}
         </div>
       </div>
-      <Avatar className="presentation__avatar" src={avatarImg} alt="avatar" />
+      <Avatar className="presentation__avatar" src={} alt="avatar" />
     </section>
   );
 }
