@@ -30,7 +30,7 @@ export default function Presentation() {
           ))}
         </div>
       </div>
-      <Avatar className="presentation__avatar" src={} alt="avatar" />
+      <Avatar className="presentation__avatar" src="" alt="avatar" />
     </section>
   );
 }
