@@ -6,7 +6,7 @@ const link = [
   {
     name: "LinkedIn",
     icon: LinkedInIcon,
-    link: "https://www.linkedin.com/in/alexandre-pereira-viegas/",
+    link: "https://www.linkedin.com/in/alexandre-p-viegas/",
   },
   {
     name: "GitHub",
