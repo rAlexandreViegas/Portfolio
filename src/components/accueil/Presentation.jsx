@@ -6,15 +6,10 @@ export default function Presentation() {
     <section className="presentation">
       <div className="presentation__container">
         <h1 className="presentation__title">
-          Bienvenue, <br />
-          Je suis Alexandre Viegas
+          Hey, <br />
+          I'm Alexandre
         </h1>
-        <h2 className="presentation__title-h2">Développeur Web Full Stack</h2>
-        <p className="presentation__description">
-          Actuellement en formation en tant que Concepteur Développeur
-          d'Applications, je suis passionné par l'écosystème JavaScript, avec
-          une expertise grandissante dans la stack MERN.
-        </p>
+        <h2 className="presentation__title-h2">Full stack developer</h2>
         <div className="presentation__social">
           {socialLinks.map((link) => (
             <a
